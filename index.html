@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Concatenation</title>
+</head>
+<body>
+
+  <h2>Harvard Reference Generator</h2>
+
+  <form id="concatenateForm">
+    <label for="string1">Author's Surname:</label>
+    <input type="text" id="string1" name="string1" required><br>
+
+    <label for="string2">Author's Initial:</label>
+    <input type="text" id="string2" name="string2" required><br>
+
+    <label for="string3">Year of Publication:</label>
+    <input type="text" id="string3" name="string3" required><br>
+
+    <label for="string4">Title:</label>
+    <input type="text" id="string4" name="string4" required><br>
+    
+    <label for="string5">Subtitle:</label>
+    <input type="text" id="string5" name="string5" required><br>
+    
+    <label for="string6">Edition: </label>
+    <input type="text" id="string6" name="string6" required><br>
+    
+    <label for="string7">Place of Publication:</label>
+    <input type="text" id="string7" name="string7" required><br>
+    
+    <label for="string8">Publisher:</label>
+    <input type="text" id="string8" name="string8" required><br>
+    
+    <label for="string9">Quoted Page Number(s):</label>
+    <input type="text" id="string9" name="string9" required><br>
+
+    <button type="button" onclick="concatenateStrings()">Concatenate Strings</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function concatenateStrings() {
+      // Get input values
+      var string1 = document.getElementById("string1").value;
+      var string2 = document.getElementById("string2").value;
+      var string3 = document.getElementById("string3").value;
+      var string4 = document.getElementById("string4").value;
+      var string5 = document.getElementById("string5").value;
+      var string6 = document.getElementById("string6").value;
+      var string7 = document.getElementById("string7").value;
+      var string8 = document.getElementById("string8").value;
+      var string9 = document.getElementById("string9").value;
+
+      // Concatenate strings
+      var result = string1 + ', ' + string2 + ', ' + string3 + ', ' + string4 + ', ' + string5 + ', ' + string6 + ', ' + string7  + ', ' + string8 + ', ' + string9;
+
+      // Display result
+      document.getElementById("result").innerText = "Your Harvard Reference: " + result;
+    }
+  </script>
+
+</body>
+</html>
+
